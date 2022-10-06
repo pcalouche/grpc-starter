@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package com.pcalouche.protos;
+
+option java_multiple_files = true;
+option java_package = "com.pcalouche.protos";
+
+service GreetingService {
+  rpc sayHello(GreetingRequest) returns (GreetingResponse){}
+}
+
+message GreetingRequest {
+  string message = 1;
+}
+
+message GreetingResponse {
+  string message = 1;
+}
